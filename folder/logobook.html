@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewpoint" content="width=device-width, initial-scale=1">
+<title>Logo Design | Conatact </title>
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+  <nav class="nav nav_top">
+ <div class="logo">
+<a href="#"> <img src="logo.png" width="150"> </a>
+  </div>
+  <div class="nav_side">
+    
+  </div>
+  
+  </nav>
+  
+  
+  
+  <div class="feed">
+  <h2> Contact us for your Logo </h2>
+  <div class="feed_form">
+  <form name="submit_googlesheet" id="myformm" method="post">
+  <input type="text" name="Name" placeholder="Name"> <br>
+  <input type="email" name="Email" placeholder="Email ID"> <br>
+  <input type="number" name="Number" placeholder="Contact Number"> <br>
+  <textarea rows="5" cols="7" name="Review" placeholder="Tell us a bit about logo"></textarea><br>
+  <button type="submit"> Submit </button>
+  
+  </form>
+  </div>
+  </div>
+  
+  <footer>
+  <div class="footer_logo">
+<a href="#"> <img src="logo.png" width="150"> </a>
+  </div>
+   <div class="doc">
+   <h3>Documents </h3>
+  <a href="#"> Privacy Policy </a> |
+  <a href="#"> Terms of Use </a> |
+  <a href="#"> Refund Policy </a> 
+  </div>
+  
+  <div class="social">
+  <h3>Follow Us</h3>
+  <a href="https://www.linkedin.com/in/sacheta-saini-a14969103"> LinkedIn </a> |
+  <a href="https://www.instagram.com/squarely.commune/"> Instagram </a> 
+  </div>
+  
+  <div class="contact">
+  <h3> Contact Us</h3> 
+  <a href="https://api.WhatsApp.com/send?/phone=+919817537384" target="_blank">WhatsApp</a> |
+  <a href="mailto: sachetasaini@gmail.com"> Email </a> 
+  </div>
+  <hr>
+  <p>Copyright &copy; 2021 Squarely. All rights reserved</p>
+  
+  </footer>
+  
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+</script>
+
+  <script type="text/javascript">
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwIeMnBZD7JuRxQMWa-qbIvxd6Jwe-EsD9qeox8JpsOq4Ljkm5MJOMNjy_3oJR8iHxA/exec'
+            const form = document.forms['submit_googlesheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us. We Will get back to You Soon :)"))
+                .catch(error => console.error('Error!', error.message))
+            })
+			
+	</script>
+	
+  
+  </body>
+  </html>
